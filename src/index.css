@@ -1,0 +1,47 @@
+.app-wrapper {
+  height: calc(100vh - 20px);
+}
+
+.customized-app {
+  height: 90%;
+}
+
+.customized-channelpreview-item:hover {
+  cursor: pointer;
+}
+
+.channel-selector {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-selector__icons {
+  display: flex;
+}
+
+.sendbird-channel-list__header {
+  display: none;
+}
+
+.custom-channel-list {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
