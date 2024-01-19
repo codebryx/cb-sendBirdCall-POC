@@ -28,6 +28,7 @@ function CustomChannelListHeader(props) {
     setChannelName("");
     setNickName("")
     setSelectedUser("");
+    setErrorMsg("")
     setOpen(false);
   };
 
