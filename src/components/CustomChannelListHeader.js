@@ -9,6 +9,7 @@ import { withSendBird, sendBirdSelectors } from "sendbird-uikit";
 
 function CustomChannelListHeader(props) {
   const [channelName, setChannelName] = useState("");
+  const [nickName, setNickName] = useState("");
   const [selectedUser, setSelectedUser] = useState(props.userId);
   const {
     createChannel,
@@ -24,6 +25,7 @@ function CustomChannelListHeader(props) {
 
   const handleClose = () => {
     setChannelName("");
+    setNickName("")
     setSelectedUser("");
     setOpen(false);
   };
@@ -52,6 +54,13 @@ function CustomChannelListHeader(props) {
                   type="text"
                   value={channelName}
                   onChange={(e) => setChannelName(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  value={nickName}
+                  onChange={(e) => setNickName(e.target.value)}
                 />
               </div>
 
