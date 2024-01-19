@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cb-sendBirdCall-POC/static/css/main.a0deea02.css",
+    "main.js": "/cb-sendBirdCall-POC/static/js/main.988456c8.js",
+    "static/js/787.ddb2f987.chunk.js": "/cb-sendBirdCall-POC/static/js/787.ddb2f987.chunk.js",
+    "index.html": "/cb-sendBirdCall-POC/index.html",
+    "main.a0deea02.css.map": "/cb-sendBirdCall-POC/static/css/main.a0deea02.css.map",
+    "main.988456c8.js.map": "/cb-sendBirdCall-POC/static/js/main.988456c8.js.map",
+    "787.ddb2f987.chunk.js.map": "/cb-sendBirdCall-POC/static/js/787.ddb2f987.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0deea02.css",
+    "static/js/main.988456c8.js"
+  ]
+}
