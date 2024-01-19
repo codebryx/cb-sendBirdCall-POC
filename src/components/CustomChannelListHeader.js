@@ -10,6 +10,7 @@ import { withSendBird, sendBirdSelectors } from "sendbird-uikit";
 function CustomChannelListHeader(props) {
   const [channelName, setChannelName] = useState("");
   const [nickName, setNickName] = useState("");
+  const [errorMsg, setErrorMsg]=useState(false);
   const [selectedUser, setSelectedUser] = useState(props.userId);
   const {
     createChannel,
@@ -54,6 +55,7 @@ function CustomChannelListHeader(props) {
                   type="text"
                   value={channelName}
                   onChange={(e) => setChannelName(e.target.value)}
+                  required
                 />
               </div>
               <div>
@@ -61,6 +63,8 @@ function CustomChannelListHeader(props) {
                   type="text"
                   value={nickName}
                   onChange={(e) => setNickName(e.target.value)}
+                  placeholder="Type Nick Name"
+                  required
                 />
               </div>
 
@@ -78,6 +82,8 @@ function CustomChannelListHeader(props) {
                   ))}
                 </select>
               </div>
+              {errorMsg?
+              <p style={{width:"150px", color:"red"}}>Please fill in all the required fields.</p>:""}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -86,6 +92,10 @@ function CustomChannelListHeader(props) {
             </Button>
             <Button
               onClick={() => {
+                if (!channelName || !nickName || !selectedUser) {
+                  setErrorMsg(true);
+                  return;
+                }
                 let params = new sdk.GroupChannelParams();
                 params.isPublic = false;
                 params.isEphemeral = false;
